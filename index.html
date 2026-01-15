@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <title>E-Wallet - Iniciar sesión</title>
+
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+            <link rel="stylesheet" href="css/styles.css">
+        </head>
+    <body>
+
+        <div class="login-wrapper">
+            <div class="login-card">
+
+                <h2 class="text-center mb-4">Iniciar sesión</h2>
+
+                    <div id="alert-container"></div>
+
+                    <form id="loginForm">
+
+                    <div class="input-group mb-3">
+                        <span class="input-icon">
+                        <i class="bi bi-person"></i>
+                        </span>
+                        <input type="email" id="email" placeholder="Correo electrónico" required>
+                    </div>
+
+                    <div class="input-group mb-2">
+                        <span class="input-icon">
+                        <i class="bi bi-lock"></i>
+                        </span>
+                        <input type="password" id="pwd" placeholder="Contraseña" required>
+                    </div>
+
+                    <div class="login-options">
+                        <label class="remember">
+                        <input type="checkbox">
+                        <span></span>
+                        Recordarme
+                        </label>
+                        <a href="#" class="forgot">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <button type="submit" class="btn-login">
+                        Ingresar
+                    </button>
+                    </form>
+
+                    <p class="register-text">
+                    ¿No tienes una cuenta?
+                    <a href="#">Regístrate aquí</a>
+                    </p>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="js/login.js"></script>
+
+    </body>
+</html>
