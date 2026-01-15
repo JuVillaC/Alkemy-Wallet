@@ -1,0 +1,421 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+/* FONDO */
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top, #1a1a2e, #000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CONTENEDOR */
+.login-wrapper {
+    width: 100%;
+    padding: 1.5rem;
+}
+
+/* CARD */
+.login-card {
+    max-width: 380px;
+    margin: auto;
+    padding: 2rem;
+    background: rgba(15, 15, 25, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.15);
+    color: #fff;
+}
+
+/* TITULO */
+.login-card h2 {
+    font-weight: 600;
+}
+
+/* INPUTS */
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 3rem;
+    border-radius: 30px;
+    border: 1px solid rgba(168, 85, 247, 0.5);
+    background: transparent;
+    color: #fff;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+.input-group input:focus {
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.8);
+}
+
+/* ICONOS */
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: #c084fc;
+}
+
+/* OPCIONES */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.login-options a {
+    color: #c084fc;
+    text-decoration: none;
+}
+
+/* CHECKBOX */
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.remember input {
+    accent-color: #a855f7;
+}
+
+/* BOTÓN */
+.btn-login {
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    padding: 0.75rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(236, 72, 153, 0.5);
+}
+
+/* TEXTO FINAL */
+.register-text {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+}
+
+.register-text a {
+    color: #c084fc;
+    text-decoration: none;
+}
+
+
+/* CONTENEDOR APP */
+.app-wrapper {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    padding: 1.2rem;
+    color: white;
+    transition: all 0.3s ease;
+    }
+
+    /* Desktop */
+    @media (min-width: 768px) {
+    .app-wrapper {
+        max-width: 520px;
+        transform: scale(1.15);
+    }
+}
+
+
+/* HEADER */
+.app-header {
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.app-header i:hover {
+    transform: scale(1.15);
+    color: #c084fc;
+}
+
+/* TARJETA */
+.wallet-card {
+    background: linear-gradient(135deg, #1f2937, #7c3aed);
+    border-radius: 22px;
+    padding: 1.6rem;
+    margin-bottom: 1.8rem;
+    box-shadow: 0 20px 40px rgba(124, 58, 237, 0.45);
+    transform: scale(1.05);
+}
+
+
+.wallet-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.wallet-card .card-number {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin: 1rem 0;
+    align-content: center;
+}
+
+.wallet-card .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+/* SALDO */
+.balance-box {
+    background: linear-gradient(135deg, #312e81, #581c87);
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.balance-box h2 {
+    font-size: 2.4rem;
+    margin: 0.5rem 0 1rem;
+    letter-spacing: 1px;
+}
+
+/* ACCIONES */
+.actions {
+    display: flex;
+    justify-content: space-around
+}
+
+.action-btn {
+    background: rgba(255,255,255,0.18);
+    border: none;
+    border-radius: 16px;
+    padding: 0.9rem 1.4rem;
+    color: white;
+    font-weight: 600;
+    min-width: 110px;
+    transition: all 0.25s ease;
+    }
+
+    .action-btn i {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+    }
+
+    /* Hover desktop */
+    @media (min-width: 768px) {
+    .action-btn:hover {
+        transform: translateY(-4px) scale(1.05);
+        background: rgba(255,255,255,0.25);
+    }
+}
+
+
+/* NAVEGACIÓN */
+.bottom-nav.grande {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.8rem;
+    }
+
+    .bottom-nav.grande button {
+    flex: 1;
+    background: linear-gradient(135deg, #1f2937, #312e81);
+    border: none;
+    border-radius: 14px;
+    padding: 0.9rem;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.25s ease;
+    }
+
+    .bottom-nav.grande button i {
+    font-size: 1.4rem;
+    }
+
+    .bottom-nav.grande button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #312e81, #7c3aed);
+}
+
+@media (min-width: 768px) {
+    .bottom-nav.grande button i {
+    font-size: 1.6rem;
+    }
+}
+
+
+/* MENÚ LATERAL */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: #020617;
+    color: white;
+    padding: 1.5rem;
+    z-index: 1000;
+    transition: left 0.3s ease;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+.side-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    }
+
+.side-menu-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.side-menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.side-menu-list li:hover {
+    color: #c084fc;
+}
+
+.notification-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: #020617;
+    color: white;
+    padding: 1.5rem;
+    z-index: 1000;
+    transition: right 0.3s ease;
+}
+
+.notification-panel.active {
+    right: 0;
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.notification-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.notification-empty {
+    text-align: center;
+    opacity: 0.7;
+    margin-top: 2rem;
+}
+
+/* ANIMACIONES DE ICONOS */
+.icon-active {
+    transform: rotate(90deg) scale(1.2);
+    color: #c084fc;
+}
+
+.bell-active {
+    animation: bellPop 0.3s ease;
+    color: #c084fc;
+}
+
+@keyframes bellPop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+/* OVERLAY + BLUR */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 900;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* FEEDBACK DE BOTONES */
+button {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/*feedback táctil en botones principales */
+.action-btn:active,
+.bottom-nav.grande button:active {
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    transform: scale(0.94);
+}
