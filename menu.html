@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>E-Wallet - Menú Principal</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="overlay" id="overlay"></div>
+
+        <!-- MENÚ LATERAL -->
+        <div class="side-menu" id="sideMenu">
+            <div class="side-menu-header">
+                <span>Menú</span>
+                <button id="closeMenu">✕</button>
+            </div>
+
+            <ul class="side-menu-list">
+                <li id="menuDeposit">Recibir dinero</li>
+                <li id="menuSend">Enviar dinero</li>
+                <li id="menuMov">Movimientos</li>
+                <li id="menuLogout">Cerrar sesión</li>
+            </ul>
+        </div>
+
+        <!-- NOTIFICACIONES -->
+        <div class="notification-panel" id="notifications">
+            <div class="notification-header">
+                <span>Notificaciones</span>
+                <button id="closeNotifications">✕</button>
+            </div>
+
+            <p class="notification-empty">
+                No tienes notificaciones nuevas
+            </p>
+        </div>
+
+
+        <div class="app-wrapper">
+
+            <!-- Header -->
+            <header class="app-header">
+                <i class="bi bi-list" id="openMenu"></i>
+                <h3>¡Bienvenido a AlkeBank!</h3>
+                <i class="bi bi-bell" id="openNotifications"></i>
+            </header>
+
+            <!-- Tarjeta -->
+            <section class="wallet-card">
+                <div class="card-header">
+                    <span>| ALKEBANK BANCO E INVERSIONES</span>
+                    <span>CRÉDITO |</span>
+                </div>
+                <div class="card-number">
+                    |  **** **** **** 2303
+                </div>
+                <div class="card-footer">
+                    <span>| JUAN VILLA C.</span>
+                    <i class="bi bi-wifi"></i>
+                </div>
+            </section>
+
+            <!-- Saldo -->
+            <section class="balance-box">
+                <small>Saldo disponible</small>
+                <h2>$79,438 CLP</h2>
+
+                <div class="actions">
+                    <button class="action-btn" id="sendBtn">
+                        <i class="bi bi-arrow-up-right"></i>
+                        Enviar
+                    </button> 
+                    
+                    <button class="action-btn" id="depositBtn">
+                        <i class="bi bi-arrow-down-left"></i>
+                        Recibir
+                    </button>
+                </div>
+            </section>
+
+            <!-- Navegación -->
+            <nav class="bottom-nav grande">
+                <button id="movBtn">
+                    <i class="bi bi-clock-history"></i>
+                    Movimientos
+                </button>
+                <button id="logoutBtn">
+                    <i class="bi bi-box-arrow-right"></i>
+                    Cerrar sesión
+                </button>
+            </nav>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="js/menu.js"></script>
+    </body>
+</html>
