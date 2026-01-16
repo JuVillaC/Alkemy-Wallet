@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>E-Wallet - Depositar Dinero</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        
+        <div class="app-wrapper">
+            <header class="app-header">
+                <i class="bi bi-arrow-left" id="backMenu"></i>
+                <h3>Depositar Dinero</h3>
+                <span></span>
+            </header>
+
+            <!-- Depósito-->
+            <div class="login-card">
+                <div class="text-center mb-3">
+                    <small class="text-muted">Saldo actual</small>
+                    <h3 id="saldoActual">$0</h3>
+                </div>
+            </div>
+
+            <div id="alert-container"></div>
+
+            <form id="depositForm">
+                <div class="form-group">
+                    <input type="number" id="amount" class="form-control text-center" placeholder="Monto a depositar" min="1" required>
+                </div>
+                <button type="submit" class="btn-login">Confirmar depósito</button>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="js/deposit.js"></script>
+    </body>
+</html>
