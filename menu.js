@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+    // Asegurar overlay apagado
+    $('#overlay').removeClass('active');
+
     if (!localStorage.getItem("logged")) {
         window.location.href = "index.html";
         return;
@@ -8,57 +11,30 @@ $(document).ready(function () {
     const balance = localStorage.getItem("balance") || 0;
     $('#balance').text(`$${balance}`);
 
-    $('#depositBtn').on('click', function () {
-        window.location.href = 'deposit.html';
-    });
-
-    $('#sendBtn').on('click', function () {
+    $('#sendBtn').on('click', () => {
         window.location.href = 'sendmoney.html';
     });
 
-    $('#movBtn').on('click', function () {
+    $('#depositBtn').on('click', () => {
+        window.location.href = 'deposit.html';
+    });
+
+    $('#movBtn').on('click', () => {
         window.location.href = 'transactions.html';
     });
 
-    $('#logoutBtn').on('click', function () {
+    $('#logoutBtn, #menuLogout').on('click', () => {
         localStorage.removeItem('logged');
         window.location.href = 'index.html';
     });
 
-    $('#menuLogout').on('click', function () {
-        localStorage.removeItem('logged');
-        window.location.href = 'index.html';
-    });
+    $('#menuDeposit').click(() => window.location.href = 'deposit.html');
+    $('#menuSend').click(() => window.location.href = 'sendmoney.html');
+    $('#menuMov').click(() => window.location.href = 'transactions.html');
 
+    $('#openMenu').click(() => $('#sideMenu').addClass('active'));
+    $('#closeMenu').click(() => $('#sideMenu').removeClass('active'));
 
-    // Menú
-    $('#openMenu').on('click', function () {
-        $('#sideMenu').addClass('active');
-        abrirOverlay();
-    });
-
-    $('#closeMenu').on('click', function () {
-        $('#sideMenu').removeClass('active');
-        cerrarOverlay();
-    });
-
-    // Notificaciones
-    $('#openNotifications').on('click', function () {
-        $('#notifications').addClass('active');
-        abrirOverlay();
-    });
-
-    $('#closeNotifications').on('click', function () {
-        $('#notifications').removeClass('active');
-        cerrarOverlay();
-    });
-
-    // Cerrar tocando fondo
-    $('#overlay').on('click', function () {
-        $('#sideMenu, #notifications').removeClass('active');
-        $('#openMenu').removeClass('icon-active');
-        $('#openNotifications').removeClass('bell-active');
-        cerrarOverlay();
-    });
-
+    $('#openNotifications').click(() => $('#notifications').addClass('active'));
+    $('#closeNotifications').click(() => $('#notifications').removeClass('active'));
 });
