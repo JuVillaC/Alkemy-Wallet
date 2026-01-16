@@ -497,4 +497,18 @@ button:active {
     }
 }
 
+/* QUITAR FLECHAS DEL INPUT NUMBER */
+
+/* CHROME, EDGE, SAFARI */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* FIREFOX */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 
