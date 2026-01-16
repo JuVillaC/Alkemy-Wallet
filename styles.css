@@ -422,7 +422,7 @@ button:active {
     transform: scale(0.96);
 }
 
-/*feedback táctil en botones principales */
+/* FEEDBACK TÁCTIL EN BOTONES PRINCIPALES */
 .action-btn:active,
 .bottom-nav.grande button:active {
     box-shadow: 0 0 0 rgba(0,0,0,0);
@@ -456,6 +456,45 @@ button:active {
 #depositForm input, depositForm .btn-login {
     max-width: 260px;
     margin: 0 auto;
+}
+
+/* ANIMACIÓN DE ENTRADA DEL FORMULARIO */
+.deposit-form {
+    animation: slideFadeUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slideFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* AJUSTES MOBILE */
+@media (max-width: 480px) {
+    .login-card {
+        margin-bottom: 1.8rem;
+        padding: 1.4rem;
+    }
+
+    .deposit-form {
+        margin-top: 0.5rem;
+    }
+
+    #amount {
+        max-width: 260px;
+        margin: 0 auto;
+    }
+
+    .brn-login {
+        max-width: 2809px;
+        margin: 1rem auto 0;
+    }
 }
 
 
