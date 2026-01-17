@@ -538,22 +538,22 @@ input[type=number] {
 
 /* MODIFICACIÓN SELECCIONAR TIPO DE CUENTA */
 .custom-select {
-    .custom-select {
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg fill='white' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 1.2rem center;
-    background-size: 16px;
+    height: 54px;
+    border-radius: 28px;
+    background: #2b2b3c;
+    color: white;
+    border: 1px solid rgba(168,85,247,0.6);
+    padding: 0 18px;
 }
 
+/* IMPORTANTE */
+.custom-select option {
+    color: #000;
+    background: #fff;
+}
 .custom-select:focus {
     outline: none;
     box-shadow: 0 0 12px rgba(168, 85, 247, 0.8);
-}
-
-.custom-select option {
-    background: #0f172a;
-    color: black;
 }
 
 /* MODAL FORM ORDENADO */
@@ -606,6 +606,42 @@ input[type=number] {
 #amount {
     text-align: center;
     letter-spacing: 0.5px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.05);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.contact-item:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+.contact-item.active {
+    outline: 2px solid #a855f7;
+    background: rgba(168,85,247,0.15);
+}
+
+.contact-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+}
+
+.contact-item.active .contact-dot {
+    background: #a855f7;
+}
+
+.contact-info small {
+    opacity: 0.7;
+    font-size: 0.8rem;
 }
 
 
