@@ -206,7 +206,7 @@ body {
     padding: 1.2rem;
     text-align: center;
     margin-bottom: 1rem;
-    padding-botom: 1rem
+    padding-bottom: 1rem
 }
 
 .balance-box h2 {
@@ -309,7 +309,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1.5rem;
-    }
+}
 
 .side-menu-header button {
     background: none;
@@ -451,7 +451,8 @@ button:active {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    aling-items: center;
+    align-items: center;
+}
 
 #depositForm input, depositForm .btn-login {
     max-width: 260px;
@@ -509,6 +510,7 @@ input[type=number]::-webkit-outer-spin-button {
 /* FIREFOX */
 input[type=number] {
     -moz-appearance: textfield;
+    appearance: none;
 }
 
 /* MODIFICACIÓN SELECCIONAR TIPO DE CUENTA */
@@ -571,6 +573,3 @@ input[type=number] {
         max-width: 380px;
     }
 }
-
-
-
