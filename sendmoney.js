@@ -19,16 +19,16 @@ $(document).ready(function () {
         selectedIndex = null;
         $('#sendMoneyBtn').hide();
 
-        $('#contactList').html('');
-        contacts.forEach((c, index) => {
-            $('#contactList').append(`
-                <li class="list-group-item">
-                    <input type="radio" name="contact" value="${index}">
-                    <strong>${c.name}</strong><br>
+        $('#contactList').append(`
+            <li class="contact-item" data-index="${index}">
+                <div class="contact-dot"></div>
+                <div class="contact-info">
+                    <strong>${c.name}</strong>
                     <small>${c.bank} · ${c.account}</small>
-                </li>
-            `);
-        });
+                </div>
+            </li>
+        `);
+
     }
 
     renderContacts();
@@ -80,11 +80,11 @@ $(document).ready(function () {
 
 
     // Seleccionar contacto
-    $(document).on('change', 'input[name="contact"]', function () {
-        selectedIndex = $(this).val();
-        $('#sendMoneyBtn').fadeIn();
-        $(this).closest('li').addClass('active')
-            .siblings().removeClass('active');
+    $(document).on('click', '.contact-item', function () {
+        selectedIndex = $(this).data('index');
+        $('.contact-item').removeClass('active');
+        $(this).addClass('active')
+        $('#sendmoneyBtn').fadeIn();
     });
 
     // Enviar dinero
