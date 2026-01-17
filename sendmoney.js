@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    $('#newContactForm').hide();
+
     // Protección de sesión
     if (!localStorage.getItem("logged")) {
         window.location.href = "index.html";
@@ -18,18 +20,21 @@ $(document).ready(function () {
     function renderContacts() {
         selectedIndex = null;
         $('#sendMoneyBtn').hide();
+        $('#contactList').html('');
 
-        $('#contactList').append(`
-            <li class="contact-item" data-index="${index}">
-                <div class="contact-dot"></div>
-                <div class="contact-info">
-                    <strong>${c.name}</strong>
-                    <small>${c.bank} · ${c.account}</small>
-                </div>
-            </li>
-        `);
-
+        contacts.forEach((c, index) => {
+            $('#contactList').append(`
+                <li class="contact-item" data-index="${index}">
+                    <div class="contact-dot"></div>
+                    <div class="contact-info">
+                        <strong>${c.name}</strong>
+                        <small>${c.bank} · ${c.account}</small>
+                    </div>
+                </li>
+            `);
+        });
     }
+
 
     renderContacts();
 
@@ -84,7 +89,7 @@ $(document).ready(function () {
         selectedIndex = $(this).data('index');
         $('.contact-item').removeClass('active');
         $(this).addClass('active')
-        $('#sendmoneyBtn').fadeIn();
+        $('#sendMoneyBtn').fadeIn();
     });
 
     // Enviar dinero
