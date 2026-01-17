@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    $('#sendMoneyBtn').prop('disabled', true);
+
     // Protección de sesión
     if (!localStorage.getItem("logged")) {
         window.location.href = "index.html";
@@ -30,10 +32,12 @@ $(document).ready(function () {
 
     renderContacts();
 
-    // Abrir modal
-    $('#addContactBtn').click(() => {
-        $('#contactModal').modal('show');
+    // Mostrar formulario nuevo contacto
+    $('#addContactBtn').on('click', function () {
+        $('#newContactForm').slideDown();
+        $(this).hide();
     });
+
 
     // Guardar contacto
     $('#saveContactBtn').click(() => {
