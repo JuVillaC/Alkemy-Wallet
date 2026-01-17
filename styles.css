@@ -511,4 +511,29 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+/* Modificación seleccionar tipo de cuenta */
+.custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background: rgba(15, 15, 25, 0.95);
+    color: #fff;
+    border-radius: 30px;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(168, 85, 247, 0.5);
+    cursor: pointer;
+}
+
+.custom-select:focus {
+    outline: none;
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.8);
+}
+
+.custom-select option {
+    background: #0f172a;
+    color: #fff;
+}
+
+
 
