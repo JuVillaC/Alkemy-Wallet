@@ -13,31 +13,32 @@ $(document).ready(function() {
   });
 
   function mostrarUltimosMovimientos(filtro) {
-    $('#list').html('');
-
-    if (transactions.length === 0) {
-      $('list').append(`
-        <li class="list-group-item text-center text-muted">
-          <strong>No hay movimientos</strong><br>
-          <small>Realiza un depósito o transferencia</small>
-        </li>
-      `);
-      return;
-    }
+      $('#list').html('');
   
-    transactions
-      .slice()
-      .reverse()
-      .forEach(t => {
-        if (filtro === 'all' || t.includes(filtro)) {
+      const filtradas = transactions
+          .slice()
+          .reverse()
+          .filter(t => filtro === 'all' || t.includes(filtro));
+  
+      if (filtradas.length === 0) {
           $('#list').append(`
-            <li class="list-group-item">
-              ${t}
-            </li>
+              <li class="list-group-item text-center text-muted">
+                  <strong>No hay movimientos</strong><br>
+                  <small>Realiza un depósito o transferencia</small>
+              </li>
           `);
-        }
+          return;
+      }
+  
+      filtradas.forEach(t => {
+          $('#list').append(`
+              <li class="list-group-item">
+                  ${t}
+              </li>
+          `);
       });
   }
+
 
   // Mostrar todos al cargar
   mostrarUltimosMovimientos('all');
