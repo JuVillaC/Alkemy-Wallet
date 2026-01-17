@@ -499,6 +499,20 @@ button:active {
     }
 }
 
+.deposit-form input {
+    height: 52px;
+    border-radius: 28px;
+    background: #2b2b3c;
+    color: white;
+    border: 1px solid rgba(168,85,247,0.6);
+    text-align: center;
+}
+
+.deposit-form input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+
 /* AJUSTES MOBILE */
 @media (max-width: 480px) {
     .login-card {
@@ -556,6 +570,13 @@ input[type=number] {
     box-shadow: 0 0 12px rgba(168, 85, 247, 0.8);
 }
 
+.custom-select,
+.form-control {
+    height: 52px;
+    font-size: 0.95rem;
+}
+
+
 /* MODAL FORM ORDENADO */
 .modal-form {
     display: flex;
@@ -599,7 +620,7 @@ input[type=number] {
 
 /* SEPARACIÓN ENTRE BOTÓN Y TARJETA */
 #addContactBtn {
-    margin-bottom: 1.8rem;
+    margin-bottom: 24px;
 }
 
 
@@ -643,5 +664,6 @@ input[type=number] {
     opacity: 0.7;
     font-size: 0.8rem;
 }
+
 
 
