@@ -511,7 +511,7 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-/* Modificación seleccionar tipo de cuenta */
+/* MODIFICACIÓN SELECCIONAR TIPO DE CUENTA */
 .custom-select {
     appearance: none;
     -webkit-appearance: none;
@@ -533,6 +533,24 @@ input[type=number] {
 .custom-select option {
     background: #0f172a;
     color: #fff;
+}
+
+/* MODAL FORM ORDENADO */
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+/* LIMITAR ANCHO DEL MODAL */
+.modal-dialog {
+    max-width: 420px;
+}
+
+/* INPUTS Y SELECTS COHERENTES */
+.modal-form .form-control,
+.modal-form .custom-select {
+    width: 100%;
 }
 
 
