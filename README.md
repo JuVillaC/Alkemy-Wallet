@@ -31,21 +31,9 @@ El foco principal del proyecto está en la interactividad con JavaScript y jQuer
 🔹 jQuery
 🔹 LocalStorage
 
-## Estructura del proyecto
-Alkemy-Wallet/
-│
-├── index.html          # Inicio de sesión
-├── menu.html           # Menú principal
-├── deposit.html        # Depósito de dinero
-├── sendmoney.html      # Envío de dinero
-├── transactions.html  # Últimos movimientos
-│
-├── styles.css          # Estilos generales de la aplicación
-│
-├── menu.js             # Lógica del menú principal
-├── deposit.js          # Lógica de depósitos
-├── sendmoney.js        # Lógica de transferencias y contactos
-├── transactions.js     # Lógica de movimientos
-│
-└── favicon.ico         # Ícono de la aplicación
-
+## Organización del proyecto
+- HTML: cada archivo representa una pantalla independiente de la billetera digital.
+- CSS: concentra la estética general, animaciones y diseño responsive.
+- JavaScript: cada vista tiene su propio archivo JS para manejar eventos, validaciones y lógica.
+- LocalStorage: se utiliza para persistir sesión, saldo, contactos y movimientos.
+---
