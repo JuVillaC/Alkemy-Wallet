@@ -602,12 +602,10 @@ input[type=number] {
     margin-bottom: 1.8rem;
 }
 
-#contactList {
-    margin-top: 0.5rem;
-}
 
 #amount {
     text-align: center;
     letter-spacing: 0.5px;
 }
+
 
