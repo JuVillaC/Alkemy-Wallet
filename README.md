@@ -32,19 +32,19 @@ El foco principal del proyecto está en la interactividad con JavaScript y jQuer
 🔹 LocalStorage
 
 ## Estructura del proyecto
-/Alkemy-Wallet
+/Alkemy-Wallet  
+
+- index.html
+- menu.html
+- deposit.html
+- sendmoney.html
+- transactions.html
 │
-|- index.html
-|- menu.html
-|- deposit.html
-|- sendmoney.html
-|- transactions.html
-│
-|- styles.css
+- styles.css
 |
-|- menu.js
-|- deposit.js
-|- sendmoney.js
-|- transactions.js
-│
-|- favicon.ico
+- menu.js
+- deposit.js
+- sendmoney.js
+- transactions.js
+|
+- favicon.ico
