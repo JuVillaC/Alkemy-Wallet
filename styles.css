@@ -556,6 +556,10 @@ input[type=number] {
     max-width: 260px;
 }
 
+#sendMoneyBtn {
+    margin-top: 1rem;
+    max-width: 280px;
+
     
 /* LIMITAR ANCHO DEL MODAL */
 .modal-dialog {
@@ -573,3 +577,4 @@ input[type=number] {
         max-width: 380px;
     }
 }
+
