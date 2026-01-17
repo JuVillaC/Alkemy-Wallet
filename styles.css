@@ -553,7 +553,7 @@ input[type=number] {
 
 .custom-select option {
     background: #0f172a;
-    color: #fff;
+    color: black;
 }
 
 /* MODAL FORM ORDENADO */
@@ -610,3 +610,4 @@ input[type=number] {
     text-align: center;
     letter-spacing: 0.5px;
 }
+
