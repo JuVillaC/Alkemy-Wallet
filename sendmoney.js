@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-    $('#sendMoneyBtn').prop('disabled', true);
-
     // Protección de sesión
     if (!localStorage.getItem("logged")) {
         window.location.href = "index.html";
@@ -18,6 +16,9 @@ $(document).ready(function () {
 
     // Render contactos
     function renderContacts() {
+        selectedIndex = null;
+        $('#sendMoneyBtn').hide();
+
         $('#contactList').html('');
         contacts.forEach((c, index) => {
             $('#contactList').append(`
@@ -34,6 +35,10 @@ $(document).ready(function () {
 
     // Mostrar formulario nuevo contacto
     $('#addContactBtn').on('click', function () {
+        selectedIndex = null;
+        $('input[name="contact"]').prop('checked', false);
+        $('#sendMoneyBtn').hide();
+        
         $('#newContactForm').slideDown();
         $(this).hide();
     });
@@ -74,7 +79,8 @@ $(document).ready(function () {
         contacts.push({ name, rut, typeAccount, account, bank });
         localStorage.setItem("contacts", JSON.stringify(contacts));
 
-        $('#contactModal').modal('hide');
+        $('#newContactForm').slideUp();
+        $('#addContactBtn').show()
         $('#contactName, #contactRut, #contactTypeAccount, #contactNumberAccount, #contactBank').val('');
         renderContacts();
     });
