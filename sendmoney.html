@@ -53,21 +53,22 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content p-3">
                     <h5 class="mb-3">Nuevo contacto</h5>
-
-                    <input type="text" id="contactName" class="form-control mb-2" placeholder="Nombre y apellido">
-                    <input type="text" id="contactRut" class="form-control mb-2" placeholder="Ingrese su rut (sin puntos ni guión)">
-                    <select id="contactTypeAccount" class="form-control mb-2 custom-select">
-                        <option value="">Seleccione tipo de cuenta</option>
-                        <option value="Cuenta Vista">Cuenta Vista</option>
-                        <option value="Cuenta Corriente">Cuenta Corriente</option>
-                        <option value="Cuenta de Ahorro">Cuenta de Ahorro</option>
-                    </select>
-                    <input type="text" id="contactNumberAccount" class="form-control mb-2" placeholder="n°cta (min 8 dígitos)">
-                    <input type="text" id="contactBank" class="form-control mb-3" placeholder="Nombre del banco">
-
-                    <button class="btn-login" id="saveContactBtn">
-                        Guardar contacto
-                    </button>
+                    <div class="modal-form">
+                        <input type="text" id="contactName" class="form-control mb-2" placeholder="Nombre y apellido">
+                        <input type="text" id="contactRut" class="form-control mb-2" placeholder="Ingrese su rut (sin puntos ni guión)">
+                        <select id="contactTypeAccount" class="form-control mb-2 custom-select">
+                            <option value="">Seleccione tipo de cuenta</option>
+                            <option value="Cuenta Vista">Cuenta Vista</option>
+                            <option value="Cuenta Corriente">Cuenta Corriente</option>
+                            <option value="Cuenta de Ahorro">Cuenta de Ahorro</option>
+                        </select>
+                        <input type="text" id="contactNumberAccount" class="form-control mb-2" placeholder="n°cta (min 8 dígitos)">
+                        <input type="text" id="contactBank" class="form-control mb-3" placeholder="Nombre del banco">
+    
+                        <button class="btn-login" id="saveContactBtn">
+                            Guardar contacto
+                        </button>
+                    </div> 
                 </div>
             </div>
         </div>
