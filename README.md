@@ -33,18 +33,19 @@ El foco principal del proyecto está en la interactividad con JavaScript y jQuer
 
 ## Estructura del proyecto
 Alkemy-Wallet/
-├── index.html          (Inicio de sesión)
-├── menu.html           (Menú principal)
-├── deposit.html        (Depósito de dinero)
-├── sendmoney.html      (Envío de dinero)
-├── transactions.html  (Últimos movimientos)
 │
-├── styles.css          (Estilos generales de la aplicación)
+├── index.html          # Inicio de sesión
+├── menu.html           # Menú principal
+├── deposit.html        # Depósito de dinero
+├── sendmoney.html      # Envío de dinero
+├── transactions.html  # Últimos movimientos
 │
-├── menu.js             (Lógica del menú principal)
-├── deposit.js          (Lógica de depósitos)
-├── sendmoney.js        (Lógica de transferencias y contactos)
-├── transactions.js     (Lógica de movimientos)
+├── styles.css          # Estilos generales de la aplicación
 │
-└── favicon.ico         (Ícono de la aplicación)
+├── menu.js             # Lógica del menú principal
+├── deposit.js          # Lógica de depósitos
+├── sendmoney.js        # Lógica de transferencias y contactos
+├── transactions.js     # Lógica de movimientos
+│
+└── favicon.ico         # Ícono de la aplicación
 
