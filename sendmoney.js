@@ -51,6 +51,14 @@ $(document).ready(function () {
             );
             return;
         }
+        
+        // Validar RUT
+        if (!validarRut(rut)) {
+            $('#alert-container').html(
+                '<div class="alert alert-danger text-center">RUT inválido</div>'
+            );
+            return;
+        }
 
         if (!/^\d{8}$/.test(account)) {
             $('#alert-container').html(
@@ -66,6 +74,35 @@ $(document).ready(function () {
         $('#contactName, #contactRut, #contactTypeAccount, #contactNumberAccount, #contactBank').val('');
         renderContacts();
     });
+
+    // Función para validar RUT chileno
+    function validarRut(rut) {
+    rut = rut.replace(/\./g, '').replace('-', '').toLowerCase();
+
+    if (!/^\d{7,8}[0-9k]$/.test(rut)) {
+        return false;
+    }
+
+    const cuerpo = rut.slice(0, -1);
+    const dv = rut.slice(-1);
+
+    let suma = 0;
+    let multiplo = 2;
+
+    for (let i = cuerpo.length - 1; i >= 0; i--) {
+        suma += multiplo * cuerpo[i];
+        multiplo = multiplo < 7 ? multiplo + 1 : 2;
+    }
+
+    const dvEsperado = 11 - (suma % 11);
+    const dvFinal =
+        dvEsperado === 11 ? '0' :
+        dvEsperado === 10 ? 'k' :
+        dvEsperado.toString();
+
+    return dv === dvFinal;
+    }
+
 
     // Seleccionar contacto
     $(document).on('change', 'input[name="contact"]', function () {
