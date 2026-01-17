@@ -6,7 +6,7 @@ Para ingresar a la billetera digital utiliza las siguientes credenciales:
 Usuario: usuario@wallet.cl  
 Clave: 1234
 
-##Descripción del proyecto
+## Descripción del proyecto
 
 Este proyecto corresponde a una billetera digital desarrollada como parte del módulo de Fundamentos del Desarrollo Frontend. La aplicación simula el funcionamiento básico de una billetera virtual, permitiendo al usuario iniciar sesión, visualizar su saldo, realizar depósitos, enviar dinero a contactos y revisar el historial de movimientos.
 
